@@ -1,0 +1,38 @@
+priority -50
+
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+
+snippet mod "module"
+module `!p snip.rv='''{0}'''.format(snip.fn.split('.')[0])`( $1 );
+$2
+endmodule
+endsnippet
+
+snippet as "assign"
+	assign $1 = $2;
+endsnippet
+
+snippet al "always"
+always@($1) begin
+	$2
+end
+endsnippet
+
+snippet alc "always clk"
+always@(${1:posedge clk or negedge rst_n}) begin
+	$2
+end
+endsnippet
+
+snippet alif "always"
+always@($1) begin
+	if($2) begin
+		$3
+	end
+	else begin
+		$4
+	end
+end
+endsnippet
